@@ -13,7 +13,17 @@ function getTagContent(url, tag) {
         .then(htmlSource => {
             let htmlContent = document.createElement('body')
             htmlContent.innerHTML = htmlSource.trim()
-            console.log(htmlContent.querySelector(tag))
+            let tagContent = htmlContent.querySelector(tag)
+            if(tagContent !== null)
+            {
+                console.log(tagContent)
+            }
+            else 
+            {
+                throw new Error(
+                    `Oups, aucune occurence pour le tag ${tag}`
+                );
+            }            
         })
         .catch(error => {
             console.log("Message : ", error)
