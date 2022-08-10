@@ -6,7 +6,7 @@ function getTagContent(url, tag) {
             }
             else {
                 throw new Error(
-                    `Oups, le serveur retourne un ${response.status}`
+                    `Le serveur retourne un ${response.status}`
                 );
             }
         })
@@ -14,18 +14,16 @@ function getTagContent(url, tag) {
             let htmlContent = document.createElement('body')
             htmlContent.innerHTML = htmlSource.trim()
             let tagContent = htmlContent.querySelector(tag)
-            if(tagContent !== null)
-            {
+            if (tagContent !== null) {
                 console.log(tagContent)
             }
-            else 
-            {
+            else {
                 throw new Error(
-                    `Oups, aucune occurence pour le tag ${tag}`
+                    `Aucune occurrence pour le tag ${tag}`
                 );
-            }            
+            }
         })
         .catch(error => {
-            console.log("Message : ", error)
+            console.log("***", error)
         });
 }
