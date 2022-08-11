@@ -1,0 +1,33 @@
+{
+  "values": [
+    {
+      "path": {
+        "extension": "css",
+        "toString": "UserMain/html/_style.css"
+      }
+    },
+    {
+      "path": {
+        "extension": "html",
+        "toString": "UserMain/html/busy.html"
+      }
+    },
+    {
+      "path": {
+        "extension": "html",
+        "toString": "UserMain/html/error.html"
+      }
+    },
+    {
+      "path": {
+        "extension": "html",
+        "toString": "UserMain/html/help.html"
+      }
+    }
+  ],
+  "size": 4,
+  "isLastPage": true,
+  "start": 0,
+  "limit": 1000,
+  "nextPageStart": null
+}
