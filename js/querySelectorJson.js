@@ -1,4 +1,4 @@
-fetch("changes_.json")
+fetch("http.../chemin_vers/changes_.json")
     .then(response => {
         if (response.ok
             && response.status === 200
