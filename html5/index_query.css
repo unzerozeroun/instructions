@@ -1,0 +1,40 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    font-size: x-large;
+}
+
+input:focus {
+    outline: none;
+}
+
+#kw {
+    background-color: rgba(0, 208, 255, 0.526);
+    font: 1em sans-serif;
+    text-align: center;
+    border: 1px solid rgb(22, 58, 62);
+    box-shadow: 0px 3px 5px silver;
+}
+
+#query_box {
+    text-align: center;
+    display: block;
+    animation: fadeIn 3s;
+}
+
+#query_tips {
+    font-size: medium;
+    font-variant: small-caps;
+    padding: 1%;
+    text-shadow: 1px 2px 2px silver;
+    display: block;
+    animation: fadeIn 9s;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bonjour</title>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index_query.css">
+</head>
+
+<body>
+    <div id="query_box">
+        <form onsubmit="return validateForm()" method="get" action="index_query.html">
+            <input id="kw" type="text" size="27" aria-label="keyword" name="q" value="">
+            <input type="submit" hidden>
+        </form>
+        <div id="query_tips">Appuyer sur [ RETOUR ] pour soumettre votre requête</div>
+    </div>
+    <script>
+        // On place la boîte approximativement au milieu de l'écran.
+        let box = document.getElementById("kw");
+        box.focus();
+        box.style.marginTop = Math.round(screen.availHeight / 2.7) + "px";
+
+        // Validation que le champ n'est pas vide.
+        function validateForm() {
+            let str = document.getElementById("kw");
+            if (str.value === "") {
+                alert("Taper au minimum un mot-clé...");
+                return false;
+            }
+        }
+        /* Après 10 secondes, le titre de la page va afficher la date 
+        et l'heure sera mise à jour toutes les secondes. */
+        setTimeout(() => {
+            setInterval(() => {
+                document.getElementsByTagName("title")[0].innerHTML = new Date();
+            }, 1000)
+        }, 10000);
+    </script>
+</body>
+
+</html>
