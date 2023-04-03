@@ -1,0 +1,3 @@
+# PROBLEM ? The remote certificate is invalid because of errors in the certificate chain: PartialChain ...
+dotnet dev-certs https ––clean
+dotnet dev-certs https ––trust
